@@ -1,0 +1,36 @@
+h1,
+h3 {
+    color: aqua;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+    background-color: darkolivegreen;
+}
+
+.spans {
+    color: yellow;
+}
+
+p {
+    color: aliceblue;
+}
+
+li {
+    color: aliceblue;
+}
+
+a {
+    color: #db6a00;
+}
+
+.modeImages {
+    height: 350px;
+    width: 500px;
+}
+
+.validImages {
+    height: 50px;
+    width: 100px;
+}
