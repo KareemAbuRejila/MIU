@@ -21,8 +21,22 @@ li {
     color: aliceblue;
 }
 
-a {
+#ta {
     color: #db6a00;
+    text-decoration: dashed;
+}
+
+#tad {
+    display: none;
+}
+
+a#ta:hover+#tad {
+    display: inline-block;
+}
+
+dt {
+    color: #db6a00;
+    font-weight: bold;
 }
 
 .modeImages {
