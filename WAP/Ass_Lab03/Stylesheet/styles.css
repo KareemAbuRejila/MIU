@@ -166,3 +166,17 @@ h3 {
     font-weight: normal;
     text-transform: uppercase;
 }
+
+footer {
+    color: rgb(232, 230, 227);
+    background-image: initial;
+    background-color: rgb(15, 54, 57);
+}
+
+footer {
+    clear: both;
+    padding: 3em 10%;
+    color: #fff;
+    background: #134347;
+    text-align: center;
+}
