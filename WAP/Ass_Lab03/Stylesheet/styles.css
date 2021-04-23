@@ -8,12 +8,9 @@ div {
     display: block;
 }
 
-
-/* body {
-    background-color: white;
-    color: antiquewhite;
+body {
+    background-color: darkgray;
 }
-*/
 
 .intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(37, 37, 37, 0.5), rgb(0, 0, 0)), url(../Images/wellpaper.jpg);
@@ -127,6 +124,11 @@ div {
 
 .requirements {
     background-color: #000000;
+    color: white;
+}
+
+.requirements a {
+    text-decoration: none;
 }
 
 .preamble>p,
@@ -139,7 +141,7 @@ div {
 }
 
 .contentinfo {
-    color: rgb(255, 0, 13);
+    color: rgb(0, 255, 179);
     background-color: rgba(0, 44, 0, 0.404);
     width: auto;
     padding: 1em 12%;
@@ -147,8 +149,8 @@ div {
     text-align: center;
 }
 
-.contentinfo>a {
-    text-decoration: dotted;
+.contentinfo a {
+    text-decoration: none;
 }
 
 h3 {
