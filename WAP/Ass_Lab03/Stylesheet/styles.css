@@ -9,11 +9,10 @@ div {
 }
 
 
-/* body {
-    background-color: white;
-    color: antiquewhite;
+body {
+    background-color: black;
 }
-*/
+
 
 .intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(37, 37, 37, 0.5), rgb(0, 0, 0)), url(../Images/wellpaper.jpg);
