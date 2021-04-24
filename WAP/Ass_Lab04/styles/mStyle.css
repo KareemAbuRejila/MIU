@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+}
+
+.navbar__header {
+    background: rgb(4, 207, 180);
+    display: flex;
+    justify-items: start;
+    padding: 10px 10px;
+    color: black;
+}
+
+.form_containner {
+    display: grid;
+}
+
+.form_containner label {
+    font-size: medium;
+    margin: 10px 16px;
+    color: #000;
+    font-weight: 500;
+}
+
+.form_containner input {
+    font-size: medium;
+    margin: 10px 100px;
+    color: #000;
+    font-weight: 500;
+}
