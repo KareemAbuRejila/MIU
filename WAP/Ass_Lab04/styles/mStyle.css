@@ -92,7 +92,6 @@ input[type="reset"] {
     display: flex;
     justify-content: center;
     background: rgb(121, 121, 121);
-    padding: 10px;
 }
 
 .buttons__containner {
