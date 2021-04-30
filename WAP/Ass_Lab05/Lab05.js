@@ -34,7 +34,6 @@ const listOfEmplyees = [
     new Employee("Kareem 4", "AbuRejila 4", new Date(2002, 28, 11)),
     new Employee("Kareem 5", "AbuRejila 5", new Date(2005, 28, 11)),
 ];
-
 console.log(
     listOfEmplyees.filter((e) => e.getAge() > 20).map((e) => e.getFullName())
 );
