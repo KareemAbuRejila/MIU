@@ -105,11 +105,11 @@ linkedlist = {
 linkedlist.add(1);
 linkedlist.add(2);
 linkedlist.add(3);
-linkedlist.print(); //Expected Result: LinkedList{1,2,3};
+linkedlist.print();
 linkedlist.remove(2);
-linkedlist.print(); //Expected Result: LinkedList{1,3};
-//
-//using constructor function
+linkedlist.print();
+
+//Implentation for LinkedList By Constractor Funcation;
 function LinkedList() {
     this.values = [];
     this.add = function(a) {
@@ -126,7 +126,6 @@ let linkedlist = new LinkedList();
 linkedlist.add(1);
 linkedlist.add(2);
 linkedlist.add(3);
-linkedlist.print(); //Expected Result: LinkedList{1,2,3};
+linkedlist.print();
 linkedlist.remove(2);
-linkedlist.print(); //Expected Result: LinkedList{1,3};
-//
+linkedlist.print();
