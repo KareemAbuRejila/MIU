@@ -1,5 +1,5 @@
 //Implentation for LinkedList By Class;
-console.log('------------------------ LinkedList ----------------------')
+console.log('------------------------ LinkedList ----------------------');
 class mNode {
     constructor(data) {
         this.data = data;
@@ -54,8 +54,6 @@ class mLinkedList {
         console.log(str)
     }
 }
-
-
 let ll = new mLinkedList();
 
 console.log(ll.isEmpty());
@@ -71,3 +69,6 @@ console.log("is element removed ?" + ll.remove(50));
 ll.printList();
 console.log("is List Empty ? " + ll.isEmpty());
 ll.printList();
+
+console.log('------------------------ Quiz System ----------------------');
+
