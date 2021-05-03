@@ -72,3 +72,69 @@ ll.printList();
 
 console.log('------------------------ Quiz System ----------------------');
 
+class Student{
+    constructor(id){
+        this.id=id;
+        this.answers=[];
+    }
+    addAnswer(question){
+        this.answers.push(question);
+    }
+}
+class Question{
+    constructor(id,value){
+        this.id=id;
+        this.value=value;
+    }
+    checkAnswer(answer){
+        // console.log('Answer: '+answer);
+        return this.value===answer;
+    }
+}
+class Quiz{
+    constructor(questionss,students){
+        this.questions=new Map();
+        questionss.forEach(q => this.questions.set(q.id, q));
+        this.students=students;
+    }
+    scoreStudentBySId(sId){
+        let std=this.students.find(s=>s.id===sId);
+        if(!std) {
+            console.log('We Don\'t have this student')
+            return;}
+            // console.log('-----------------Questions------------------');
+        const correctAnswers=std.answers.reduce((sum,currAnswer)=>{
+            // console.log('Current Answer: '+this.questions.get(currAnswer.id));
+            if (currAnswer.checkAnswer(this.questions.get(currAnswer.id))) {
+                sum =sum+ 1;
+                        }
+            // console.log(this.questions.get(currAnswer.id));
+
+            // if(currAnswer.id===3)
+            return sum;
+        }, 0);
+            
+            console.log(correctAnswers);
+    }
+    getAverageScore(){
+        return this.students.reduce(
+            (prev,std,indx,array)=>{
+                return prev+this.scoreStudentBySId(std.id)/array.length;
+            }
+        ,0)
+    }
+}
+
+const student1 = new Student(10);
+student1.addAnswer(new Question(2, 'a'));
+student1.addAnswer(new Question(3, 'b'));
+student1.addAnswer(new Question(1, 'b'));
+const student2 = new Student(11);
+student2.addAnswer(new Question(3, 'b'));
+student2.addAnswer(new Question(2, 'a'));
+student2.addAnswer(new Question(1, 'd'));
+const students = [student1, student2];
+const questions =[new Question(1, 'b'), new Question(2, 'a'), new Question(3, 'b')];
+console.log(students)
+console.log(questions)
+const quiz=new Quiz(questions,students);
