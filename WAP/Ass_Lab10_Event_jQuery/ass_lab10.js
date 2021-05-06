@@ -1,89 +1,64 @@
-"use strict";
+(function(){
+    "use strict";
+    window.onload = function() {
+        document.getElementById("stop_btn").disabled = true;
+        document.getElementById("start_btn").onclick = startAnimation;
+        document.getElementById("stop_btn").onclick = stopAnimation;
+        document.getElementById("size_select").onchange = changeSize;
+        document.getElementById("box_label").onclick = changeTurbo;
 
-var frames = [];
-var ind = 0, currentAscii = "", speed = null;
 
-window.onload = function loadJS(){
-		var btnStart = document.getElementById('btnStart');
-		btnStart.onclick = start;
-        
-        var btnStop = document.getElementById('btnStop');
-        btnStop.onclick = stop;
-        btnStop.disabled=true;
-        
-        var selAnimation=document.getElementById('selAnimation');
-        selAnimation.onchange=selectAnimation;
-        
-        var selSize=document.getElementById('selSize');
-        selSize.onchange=changeSize;
-        
-        var chkType=document.getElementById('chkType');
-        chkType.onchange=changespeed;
-};
-
-function doAnimation(){
-    var myTextArea = document.getElementById('myTextArea');
-    myTextArea.value = frames[ind];
-    ind++;
-    if(ind>frames.length-1) {
-        ind=0;
     }
-}
 
-function start() {
-    document.getElementById('btnStop').disabled=false;
-    document.getElementById('selAnimation').disabled=true;
-    document.getElementById('btnStart').disabled=true;
-    
-    ind=0;
-    var myTextArea = document.getElementById('myTextArea');
-    currentAscii = myTextArea.value;
-    frames = myTextArea.value.split("=====\n");
-    var chkType = document.getElementById('chkType');
+    var counter = 0;
+    var timerInterval;
+    var delayMs = 250;
+    var frames;
+    var frameArr;
 
-    if(chkType.checked) {
-        speed = setInterval(doAnimation,100);
-    } else {
-        speed = setInterval(doAnimation,200);
-        
+    function startAnimation(){
+        var animation = document.getElementById("animation_select");
+        var ani_option = animation.options[animation.selectedIndex].value;
+        frames = ANIMATIONS[ani_option];
+        frameArr = frames.split("=====\n");
+        changeTurbo();
+
+        changeSize();
+        document.getElementById("start_btn").disabled = true;
+        document.getElementById("stop_btn").disabled = false;
     }
-    
 
-}
-
-function stop(){
-    document.getElementById('btnStop').disabled=true;
-    document.getElementById('selAnimation').disabled=false;
-    document.getElementById('btnStart').disabled=false;
-    clearInterval(speed);
-    speed = null;
-    var myTextArea = document.getElementById('myTextArea');
-    myTextArea.value = currentAscii;
-}
-
-function changespeed(){
-    if(speed !== null) {
-        clearInterval(speed);
-        speed = null;
-		var chkType = document.getElementById('chkType');
-		if (chkType.checked) {
-			speed = setInterval(doAnimation,100);
-		} else {
-			speed = setInterval(doAnimation,200);
-			
-		}
+    function stopAnimation(){
+        window.clearInterval(timerInterval);
+        document.getElementById("display_area").value = frames;
+        document.getElementById("start_btn").disabled = false;
+        document.getElementById("stop_btn").disabled = true;
     }
-}
 
-function changeSize(){
-    var selSize=document.getElementById('selSize');
-    var myTextArea=document.getElementById('myTextArea');
-    myTextArea.style.fontSize=selSize.value;
-    
-}
+    function changeSize(){
+        var size = document.getElementById("size_select");
+        var size_option = size.options[size.selectedIndex].value;
+        document.getElementById("display_area").style.fontSize = size_option;
+    }
 
-function selectAnimation(){
-    var selAnimation=document.getElementById('selAnimation');
-    var myTextArea=document.getElementById('myTextArea');
-    myTextArea.value=ANIMATIONS[selAnimation.value];
-}
+    function changeTurbo(){
+        clearInterval(timerInterval);
+        var isTurbo = document.getElementById("box_label").checked;
+        if(isTurbo){
+            delayMs = 50;
+
+        } else {
+            delayMs = 250;
+        }
+        timerInterval = setInterval(animation_callback, delayMs);
+    }
+
+    function animation_callback(){
+        if(counter >= frameArr.length){
+            counter = 0;
+        }else {
+            document.getElementById("display_area").value =  frameArr[counter];
+            counter++;
+        }
+    }
+}())
