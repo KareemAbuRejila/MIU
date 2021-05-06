@@ -28,12 +28,12 @@ class mLinkedList {
         let current = this.head;
         let prev = null;
 
-        while (current != null) {
-            if (current.element === element) {
+        while (current) {
+            if (current.data === element) {
                 if (prev == null) this.head = current.next;
-                else prev.next = current.element;
+                else prev.next = current.next;
                 this.size--;
-                return current.element;
+                return current.data;
             }
             prev = current;
             current = current.next;
@@ -65,7 +65,7 @@ ll.add(30);
 ll.add(40);
 ll.add(50);
 ll.printList(ll);
-console.log("is element removed ?" + ll.remove(50));
+console.log("is element removed ? " + ll.remove(50));
 ll.printList();
 console.log("is List Empty ? " + ll.isEmpty());
 ll.printList();
