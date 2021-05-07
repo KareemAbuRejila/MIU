@@ -20,6 +20,8 @@ public class Calculator extends HttpServlet {
         if(s1 != null && s2 != null){
             out.println( s1 + " + " + s2 + " = "  + (Integer.parseInt(s1) + Integer.parseInt(s2)  ));
         }
+
+
         String number3 = request.getParameter("number3");
         String number4 = request.getParameter("number4");
 
