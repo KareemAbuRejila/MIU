@@ -1,0 +1,50 @@
+h1,
+h3 {
+    color: aqua;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+    background-color: darkolivegreen;
+}
+
+.spans {
+    color: yellow;
+}
+
+p {
+    color: aliceblue;
+}
+
+li {
+    color: aliceblue;
+}
+
+#ta {
+    color: #db6a00;
+    text-decoration: dashed;
+}
+
+#tad {
+    display: none;
+}
+
+a#ta:hover+#tad {
+    display: inline-block;
+}
+
+dt {
+    color: #db6a00;
+    font-weight: bold;
+}
+
+.modeImages {
+    height: 350px;
+    width: 500px;
+}
+
+.validImages {
+    height: 50px;
+    width: 100px;
+}

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+div {
+    display: block;
+}
+
+body {
+    background-color: darkgray;
+}
+
+body {
+    background-color: black;
+}
+
+.intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(37, 37, 37, 0.5), rgb(0, 0, 0)), url(../Images/wellpaper.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.intro ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.intro ul li {
+    display: inline;
+}
+
+.intro ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.6s ease;
+}
+
+.banner h1 {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    display: contents;
+}
+
+.banner h2 {
+    color: rgb(245, 255, 228);
+    font-size: 20px;
+    text-align: center;
+}
+
+.summary {
+    color: rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    top: 70px;
+    font-size: larger;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    /* width: 400px; */
+}
+
+.summary a {
+    padding: 10px;
+    border-radius: 15px 15px 0px 15px;
+    border: .01px solid green;
+    text-decoration: none;
+    font-size: large;
+    margin: 20px;
+}
+
+.summary a:hover {
+    color: white;
+    background-color: green;
+}
+
+.summary #downloadSec {
+    position: relative;
+    top: 50px;
+    vertical-align: middle;
+    transform: translate(-50%);
+}
+
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+    line-height: 2em;
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 1em 5% 3em 10%;
+    color: white;
+}
+
+.preamble {
+    background-color: #00ff9d0c;
+}
+
+.explanation {
+    background-color: #ff002b0c;
+}
+
+.participation {
+    background-color: #ff00dd0c;
+}
+
+.benefits {
+    background-color: #1100ff0c;
+}
+
+
+/* .requirements {
+    background-color: #00e1ff0c;
+} */
+
+.requirements {
+    background-color: #000000;
+    color: white;
+}
+
+.requirements a {
+    text-decoration: none;
+}
+
+.preamble>p,
+.explanation>p,
+.participation>p,
+.benefits>p,
+.requirements>p {
+    margin-top: 1em;
+    max-width: 70%;
+}
+
+.contentinfo {
+    color: rgb(0, 255, 179);
+    background-color: rgba(0, 44, 0, 0.404);
+    width: auto;
+    padding: 1em 12%;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contentinfo a {
+    text-decoration: none;
+}
+
+h3 {
+    margin: 2em 0 0 0;
+    color: #00ff9d;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+footer {
+    color: rgb(232, 230, 227);
+    background-image: initial;
+    background-color: rgb(15, 54, 57);
+}
+
+footer {
+    clear: both;
+    padding: 3em 10%;
+    color: #fff;
+    background: #134347;
+    text-align: center;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/mStyle.css" />
+</head>
+
+<body>
+    <div class="containner">
+        <nav class="nav">
+            <h2>Workshop Registration</h2>
+        </nav>
+        <form action="/" class="my__form">
+            <div class="content__form">
+                <div class="firstColmn">
+                    <p><u>Register now while seats are available!</u></p>
+
+                    <div class="filed">
+                        <div class="labl"></div>
+                        <div class="labr"></div>
+                    </div>
+                    <div class="input__field">
+                        <label for="userName">First Name</label>
+                        <input id="userName" type="text" autocomplete="username" name="userName" autofocus required>
+                    </div>
+                    <div class="input__field">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" type="text" autocomplete="lastname" name="lastrName" autofocus required>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="comOrIns">Company/Insititution</label>
+                        <input id="comOrIns" type="text" autocomplete="organization" name="comOrInst" autofocus required>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="address">Address</label>
+                        <textarea id="address" autofocus required></textarea>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="input__field">
+                        <label for="city">City</label>
+                        <input id="city" type="text" autocomplete="address-level4" name="city" autofocus required>
+                    </div>
+                    <div class="input__field">
+                        <label for="state">State/Province/Region</label>
+                        <div class="custome__select">
+                            <select>
+                                <option value="" disabled>--Select--</option>
+                                <option value="IA">IWOA</option>
+                                <option value="IL">Ilino</option>
+                                <option value="cal">California</option>
+                                <option value="tex">Texas</option>
+                                <option value="flo">Florida</option>
+                                <option value="Al">Alaska</option>
+                                <option value="Haw">Hawaii</option>
+                                <option value="NY">New York</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__field">
+                        <label for="country">Country</label>
+                        <div class="custome__select">
+                            <select>
+                                <option value="" disabled>--Select--</option>
+                                <option value="usa">USA</option>
+                                <option value="palestine">Palestine</option>
+                                <option value="eygpt">Eygpt</option>
+                                <option value="england">England</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" autocomplete="email" name="email" autofocus required>
+                    </div>
+                    <div class="input__field">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" autocomplete="tel-national" name="phoneNumber" autofocus required>
+                    </div>
+
+                </div>
+                <div class="secondColmn">
+                    <p><u>Lunch</u></p>
+                    <div class="input__field">
+                        <label for="meal">Meal Preference</label>
+                        <div id="meal" class="custome__select">
+                            <select>
+                            <option value="" disabled>--Select--</option>
+                            <option value="ver">Vegetarian</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <p><u>Payment Details</u></p>
+                    <div class="input__field">
+                        <label for="filed_set_ceck">What is Your Favorite Pet?</label>
+                        <fieldset id="filed_set_ceck">
+                            <input type="checkbox" name="payment_mode" value="Cash">Cash<br>
+                            <input type="checkbox" name="payment_mode" value="Cheque">Cheque<br>
+                            <input type="checkbox" name="payment_mode" value="Dernand Draft">Dernand Draft<br>
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="input__field">
+                        <label for="ddNo">DD/Cheque No.</label>
+                        <input id="ddNo" type="number" name="ddNo">
+                    </div>
+                    <div class="input__field">
+                        <label for="bank__name">Drawn On (Bank Name)</label>
+                        <input id="bank__name" type="text" name="bankName">
+                    </div>
+                    <div class="input__field">
+                        <label for="payable">Payable at</label>
+                        <input id="payable" type="text" name="payable">
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="buttons__containner">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
