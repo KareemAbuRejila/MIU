@@ -1,4 +1,4 @@
-package edu.miu.cs;
+package cs;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 @WebServlet("/")
 public class ServletTestQuiz extends HttpServlet {
     @Override
