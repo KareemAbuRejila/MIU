@@ -3,8 +3,8 @@ $(function() {
 });
 
 function updateGuests() {
-    var first = $("#first").val();
-    var last = $("#last").val();
+    let first = $("#first").val();
+    let last = $("#last").val();
     
     $.ajax("guest.ajax", {
 		"type": "post",
@@ -16,7 +16,7 @@ function updateGuests() {
 }
 
 function displayGuests(data) {
-    var guestList = "";
+    let guestList = "";
 
     $.each(data,function (i, item) {
         guestList+="<p>"+item.first+" "+item.last+"</p>";

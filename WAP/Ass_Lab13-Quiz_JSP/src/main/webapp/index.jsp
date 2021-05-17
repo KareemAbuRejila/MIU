@@ -1,4 +1,4 @@
-<%@ page import="cs.miu.edu.models.Quiz" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: KareemAbuRejila
   Date: 5/10/2021
@@ -11,7 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-<form value="quiz" method=''><h1>The Number Quiz</h1>
+<form value="quiz" method=''>
+    <h1>The Number Quiz</h1>
     <p> Your score is ${quiz.score}.</p>
     <p> Guess the next number in the sequence.</p>
     <p>${quiz.nextQuestion.value}</p>

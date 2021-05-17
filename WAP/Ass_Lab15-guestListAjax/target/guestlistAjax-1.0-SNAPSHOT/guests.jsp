@@ -6,8 +6,8 @@
     </head>
     <body>
             <p>Enter a name to be added to the guest list </p>
-            <p>First <input id='first' type='text' name='first'  /></p> 
-            <p>Last <input id='last' type='text' name='last'  /></p> 
+            <label for="first">First <input id='first' type='text' name='first'  /></label>
+            <label for="last">Last <input id='last' type='text' name='last'  /></label>
             <p><input id='send' type='button' value='Send'  /></p>
             <p>Names so far</p>
             <div id='guestList' ></div>

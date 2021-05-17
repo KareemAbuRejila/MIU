@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="123eed95-f1b9-4554-973a-a693f47110a6" name="Default Changelist" comment="" />
+    <list default="true" id="123eed95-f1b9-4554-973a-a693f47110a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/target/Ass_Lab13-Quiz_JSP-1.0-SNAPSHOT/WEB-INF/classes/cs/miu/edu/container/ServletTestQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/target/Ass_Lab13-Quiz_JSP-1.0-SNAPSHOT/WEB-INF/classes/cs/miu/edu/container/ServletTestQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/target/classes/cs/miu/edu/container/ServletTestQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab13-Quiz_JSP/target/classes/cs/miu/edu/container/ServletTestQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab14-CustomTags/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab14-CustomTags/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/guestListAjax.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/guestListAjax.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/java/controller/GuestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/java/controller/GuestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/webapp/guests.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/webapp/guests.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/webapp/resources/js/guests.js" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/src/main/webapp/resources/js/guests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/classes/controller/GuestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/classes/controller/GuestServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/WEB-INF/classes/controller/GuestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/WEB-INF/classes/controller/GuestServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/guests.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/guests.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/resources/js/guests.js" beforeDir="false" afterPath="$PROJECT_DIR$/WAP/Ass_Lab15-guestListAjax/target/guestlistAjax-1.0-SNAPSHOT/resources/js/guests.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +35,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WAP/Ass_Lab12_ServletQuizLab" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/customtaglab" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -32,17 +50,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -132,6 +139,7 @@
       <updated>1620445813957</updated>
       <workItem from="1620445815385" duration="10000" />
       <workItem from="1620518092974" duration="580000" />
+      <workItem from="1620916001771" duration="1816000" />
     </task>
     <servers />
   </component>

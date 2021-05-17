@@ -50,7 +50,7 @@ public class GuestServlet extends HttpServlet {
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        out.write(JSONguests);        
+        out.write(JSONguests);
     }
 
 
