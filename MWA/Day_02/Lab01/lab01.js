@@ -9,7 +9,6 @@ const server=app.listen(app.get('port'),(req,resp)=>{
 });
 
 app.get('/',(req,resp)=>{
-
     console.log('First Log it\'s Received');
     resp.status(404).send("First Recive with 404");
     resp.status(200).send("First Recive with 200");
