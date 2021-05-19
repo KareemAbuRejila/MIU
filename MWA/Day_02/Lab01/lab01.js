@@ -4,7 +4,7 @@ app.set('port',5000);
 const server=app.listen(app.get('port'),(req,resp)=>{
     const currentPort=server.address().port;
     console.log("The Server is Started");
-    console.log(`Server Start Lisenting in ${currentPort} ....`);
+    console.log(`Server Start Listening in ${currentPort} ....`);
     console.log(`Go to http://127.0.0.1:${currentPort}`);
 });
 

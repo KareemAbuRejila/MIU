@@ -1,0 +1,24 @@
+{
+  "name": "lab02",
+  "version": "1.0.0",
+  "description": "This is The second lab of The Second MWA Day",
+  "main": "lab02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Lab01",
+    "KareemAbuRejila",
+    "MWA",
+    "Day02",
+    "CS572"
+  ],
+  "author": "KareemAbuRejila",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
+}
