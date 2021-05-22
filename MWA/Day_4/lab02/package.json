@@ -1,0 +1,22 @@
+{
+  "name": "lab02",
+  "version": "1.0.0",
+  "description": "This is The Second Lab of Day 04",
+  "main": "lab02.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "lab02.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mongoose",
+    "NodeJs",
+    "Express"
+  ],
+  "author": "KareemAbuRejila",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10"
+  }
+}
