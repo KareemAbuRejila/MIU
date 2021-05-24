@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const aboutContoller = require('../controllers/about.controller');
 const servicesContoller=require('../controllers/services.controller');
+const providersContoller=require('../controllers/providers.controller');
 
 router.route('/abouts')
     .post(aboutContoller.addAbout)
@@ -18,5 +19,20 @@ router.route('/services')
 
 router.route('/services/:serviceId/')
     .get(servicesContoller.getOneService)
-    .patch(servicesContoller.editService);
+    .patch(servicesContoller.editService)
+    .delete(servicesContoller.deleteService);
+
+
+    router.route('/providers')
+    .post(providersContoller.addProvider)
+    .get(providersContoller.getProviders);
+
+router.route('/providers/:providerId/')
+    .get(providersContoller.getOneProvider)
+    .patch(providersContoller.editProvider)
+    .delete(providersContoller.deleteProvider);
+
+
+
+
 module.exports = router;

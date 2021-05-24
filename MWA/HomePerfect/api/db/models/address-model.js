@@ -6,4 +6,4 @@ const addressSchema=new mongoose.Schema({
     street:String
 })
 
-module.exports=addressSchema;
+module.exports.addressSchema=addressSchema;

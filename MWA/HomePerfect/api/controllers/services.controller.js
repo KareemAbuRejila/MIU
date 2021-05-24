@@ -24,12 +24,16 @@ module.exports.getServices=(req,resp)=>{
 }
 
 module.exports.getOneService=(req,resp)=>{
-    console.log('onGetOnceService');
+    console.log('onGetOnceService Need Impelent');
 
 }
 
 module.exports.editService=(req,resp)=>{
-    console.log('oneEditService');
+    console.log('oneEditService Need Impelent');
+
+}
+module.exports.deleteService=(req,resp)=>{
+    console.log('oneEditService Need Impelent');
 
 }
 

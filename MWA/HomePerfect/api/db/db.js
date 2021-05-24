@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const dbName = 'homePerfectDb'
 const dbUrl = 'mongodb://127.0.0.1:27017'
 require('./models/website_details');
-require('./models/service_model')
+require('./models/service_model');
+require('./models/provider-model');
 
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }

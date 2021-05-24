@@ -9,7 +9,7 @@ const serviceSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    providers:[String],
-});
+    providers:[String]
+})
 
 mongoose.model('Service',serviceSchema,"services");
