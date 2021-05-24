@@ -19,6 +19,7 @@ module.exports.addAbout=(req,resp)=>{
     })
 
 }
+
 module.exports.getAllAbout=(req,resp)=>{
     
     console.log("Get About Fan");
@@ -32,7 +33,7 @@ module.exports.getAllAbout=(req,resp)=>{
 }
 module.exports.getAbout=(req,resp)=>{
 
-    console.log("Get About Fan, Neet to Impelent");
+    console.log("Get About Fan,");
     // if(req.body.lang)
     // const lang=req.body.lang;
     About.find({lang:req.params.lang})

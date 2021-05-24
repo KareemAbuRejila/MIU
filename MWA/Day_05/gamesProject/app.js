@@ -7,9 +7,9 @@ const routes=require('./routes');
 app.set('port',5000);
 
 // create application/json parsern
-var jsonParser = bodyParser.json()
+let jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+let urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(urlencodedParser)
 app.use(jsonParser);
 

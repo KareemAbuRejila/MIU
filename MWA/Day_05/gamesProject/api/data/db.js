@@ -11,7 +11,7 @@ mongoose.connection.on("error",(err)=>{console.log("Mongoose Connection Error:",
 //to Disconnect
 process.on("SIGINT",()=>{
 
-    mongoose.connection.close(()=>{console.log("Mongoose closed by termination");
+    mongoose.connection.close(()=>{console.log("Mongoose closed by Init");
     process.exit(0);
 });
 
