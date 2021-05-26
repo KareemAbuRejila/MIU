@@ -96,19 +96,19 @@ const _editRreview=(req,resp,game,reviewId)=>{
     if(req.body.review)
     review.review=req.body.review;
 
-    game.save((err,UpdatedGame)=>{
-        const response={
-            status:200,
-            message:''
-        }
-        if(err){
-            response.status=500;
-            response.message=err;
-        }else{
-            response.message=UpdatedGame;
-        }
-        resp.status(response.status).json(response.message);
-    })
+    // game.save((err,UpdatedGame)=>{
+    //     const response={
+    //         status:200,
+    //         message:''
+    //     }
+    //     if(err){
+    //         response.status=500;
+    //         response.message=err;
+    //     }else{
+    //         response.message=UpdatedGame;
+    //     }
+    //     resp.status(response.status).json(response.message);
+    // })
      
 
 }

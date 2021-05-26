@@ -76,7 +76,7 @@ const _out = (resp, err, out, serviceType,method) => {
         if (serviceType&&method==="add") {
             _addProviderToService(resp,serviceType, out._id);
         }
-        else if (serviceType&&method==="add") {
+        else if (serviceType&&method==="delete") {
             _deleteProviderToService(resp,serviceType, out._id);
         }
 

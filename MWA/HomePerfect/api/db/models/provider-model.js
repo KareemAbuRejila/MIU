@@ -1,10 +1,7 @@
 const mongoose=require('mongoose');
 const addressModel=require('./address-model');
 
-const addressSchema=new mongoose.Schema({
-    city:String,
-    street:String
-})
+
 const providerSchema=new mongoose.Schema({
     userName:String,
     serviceId:String,
@@ -15,7 +12,7 @@ const providerSchema=new mongoose.Schema({
     personalImageUrl:String,
     requests:[String],
     email:String,
-    address:addressSchema
+    address:addressModel
 });
 
 

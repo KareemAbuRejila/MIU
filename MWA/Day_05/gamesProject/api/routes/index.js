@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const controllerGames = require('../api/controllers/games.controller.js');
-const controllerReviews = require('../api/controllers/reviews.controller.js');
-const contollerPublisher=require('../api/controllers/publisher.controller')
+const controllerGames = require('../controllers/games.controller.js');
+const controllerReviews = require('../controllers/reviews.controller.js');
+const contollerPublisher=require('../controllers/publisher.controller')
 
 
 router.route('/games')
