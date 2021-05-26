@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <html ng-app="meanGames">
+            <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day05_lab01</title>
+
+    <link rel="stylesheet" type="text/css" ref="/css/bootstrap.min.css" />   
+    <link href="css/custom.css" type="text/css"rel="stylesheet"/>
+</head>
+
+<body>
+    <h1>Welcome to My Day05 Lab01 Assignment</h1><br>
+    <div ng-view></div><br>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted" text-center>
+                <a href="http://compro.miu.edu" target="_blank">
+                <img src="./images/compro.png" alt="Maharishi ComPro Image" height="60">
+                <Small class="text-black-50 text center">
+                    &copy:2021 Maharishi Internaional University
+                </Small>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/game-data-factory/game-data-factory.js"></script>
+    <script src="angular-app/games-list/games-list-controller.js"></script>
+    <script src="angular-app/game/game-controller.js"></script>
+
+
+</body>
+
+</html>
