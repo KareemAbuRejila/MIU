@@ -1,0 +1,9 @@
+{{vm.title}}
+<input type="text" name="search" id="edt_search" ng-model="searchText">
+
+<ul>
+    <li ng-repeat="game in vm.games|limitTo:5 | orderBy:['-rate','title'] |filter:searchText"
+    ng-class="{redEven:$even,greenOdd:$odd}">
+        <a ng-href="#/game/{{game._id}}">{{game.title}}</a>
+    </li>
+</ul> 

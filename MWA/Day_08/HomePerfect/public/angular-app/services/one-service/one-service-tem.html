@@ -1,0 +1,10 @@
+<h3>
+    <img src="{{vm.service.imageUrl}}" alt="{{vm.service.name}}" height="80" width="80"/>
+    Service: {{vm.service.name}}</h3>
+
+    <ul>
+        <li ng-repeat="provider in vm.service.providers">
+            {{provider}}
+        </li>
+    </ul>
+
