@@ -42,21 +42,14 @@ module.exports.editProvider = (req, resp) => {
 module.exports.deleteProvider = (req, resp) => {
     console.log("OnDeleteProvider Need Impelent");
     const providerId=req.params.providerId;
-    Provider.findByIdAndDelete(providerId,(err,deleted)=>{
-        console.log("Deleted: ",deleted);
-        if(deleted||err)
-        _out(resp,err,deleted?deleted:null
-            ,deleted.serviceType?deleted.serviceType:null
-            ,"delete")
+    Provider.findByIdAndRemove(providerId,(err,deleted)=>{
+        _out(resp,err,deleted,
+            deleted.serviceType,"delete")
     })
 }
 
 module.exports.getOneProvider = (req, resp) => {
     console.log("OnGetOneProvider Need Impelent");
-    const providerID=req.params.providerId;
-    Provider.findById(providerID).exec((err,provider)=>{
-        _out(err,provider)
-    })
 }
 
 
@@ -64,6 +57,10 @@ const _calculateAge = (birthday) => { // birthday is a date
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+const _addProviderIdToService = (providerId, serviceName) => {
+
 }
 
 const _out = (resp, err, out, serviceType,method) => {

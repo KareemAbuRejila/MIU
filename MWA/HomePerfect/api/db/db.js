@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const dbName = 'homePerfectDb'
-const dbUrl = 'mongodb://127.0.0.1:27017'
+const dbUrl = 'mongodb://127.0.0.1:27017/'+dbName
 require('./models/website_details');
 require('./models/service_model');
 require('./models/provider-model');
 
 
-mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }
+mongoose.connect(dbUrl,{useNewUrlParser:true,useUnifiedTopology:true,useFindAndModify: false}
     , (err) => {
         if (err) console.log("Mongoose: you have Error on Connecting Task");
         else console.log('Connecting...');

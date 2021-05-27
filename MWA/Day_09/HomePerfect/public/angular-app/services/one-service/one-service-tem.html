@@ -1,0 +1,31 @@
+<h3>
+    <img src="{{vm.service.imageUrl}}" alt="{{vm.service.name}}" height="80" width="80" />
+    Service: {{vm.service.name}}
+</h3>
+<h4>Rating: <rating stars={{vm.rating}}></rating>
+</h4>
+
+
+<h4>Providers:</h4>
+<ul>
+    <li ng-repeat="provider in vm.service.providers">
+        {{provider}}
+    </li>
+</ul>
+
+<br>
+<br>
+<button ng-click="vm.deleteService()" style="color: brown;">Delete Service</button>
+<br>
+<br>
+<form name="vm.replaceServiceForm" ng-submit="vm.replaceService()">
+    <h2>Update Service: </h2><br>
+    <label for="edt-serviceName"> Service Rating:
+        <input type="text" name="serviceRating" id="edt-serviceRating" ng-model="vm.replaceServiceRating" required>
+    </label><br><br>
+    <label for="edt-serviceImageUrl"> Service ImageUrl:
+        <input type="text" name="serviceImageUrl" id="edt-serviceImageUrl" ng-model="vm.replaceServiceUserImageUrl" required>
+    </label><br><br>
+
+    <button type="submit" class="btn-submit">Update Service</button>
+</form>

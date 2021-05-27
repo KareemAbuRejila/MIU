@@ -9,6 +9,7 @@ const serviceSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    rate:Number,
     providers:[String]
 })
 

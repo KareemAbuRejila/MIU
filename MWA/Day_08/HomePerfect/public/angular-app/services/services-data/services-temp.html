@@ -1,8 +1,0 @@
-<h5>Your Services</h5>
-<input type="text" name="search" id="edt_search" ng-model="searchText">
-
-<ul>
-    <li  ng-repeat="service in vm.services | orderBy:['name'] |filter:searchText">
-        <a href="#/{{service._id}}">{{service.name}}</a>
-    </li>
-</ul>

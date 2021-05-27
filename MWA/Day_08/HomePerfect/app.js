@@ -11,8 +11,7 @@ app.use(jsonPaser);
 app.use(urlencodedParser);
 
 app.set('port',5996);
-app.use(express.json({extened:false}));
-app.use("/node_modules",express.static(path.join(__dirname,"node_modules")));
+
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/api',route);
 
