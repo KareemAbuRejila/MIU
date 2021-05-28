@@ -2,7 +2,7 @@
     <img src="{{vm.service.imageUrl}}" alt="{{vm.service.name}}" height="80" width="80" />
     Service: {{vm.service.name}}
 </h3>
-<h4>Rating: <rating stars={{vm.rating}}></rating>
+<h4>Rating: <rating rating=vm.rating style="color: coral;"></rating>
 </h4>
 
 
@@ -27,5 +27,5 @@
         <input type="text" name="serviceImageUrl" id="edt-serviceImageUrl" ng-model="vm.replaceServiceUserImageUrl" required>
     </label><br><br>
 
-    <button type="submit" class="btn-submit">Update Service</button>
+    <button type="submit" class="btn-submit" style="color: green;">Update Service</button>
 </form>

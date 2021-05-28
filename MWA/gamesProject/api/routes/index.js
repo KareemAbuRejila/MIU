@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const controllerGames = require('../controllers/games.controller.js');
 const controllerReviews = require('../controllers/reviews.controller.js');
-const contollerPublisher=require('../controllers/publisher.controller')
+const contollerPublisher = require('../controllers/publisher.controller');
+const controllerUsers = require('../controllers/user.controller');
 
 
 router.route('/games')
@@ -25,6 +26,12 @@ router.route('/games/:gameId/reviews')
 router.route('/games/:gameId/reviews/:reviewId')
     .put(controllerReviews.updateRreview);
 
+
+router.route('/users')
+    .post(controllerUsers.registerUser);
+
+router.route('/auth')
+    .post(controllerUsers.autheticateUser);
 
 
 

@@ -7,11 +7,12 @@ function GameRating(){
     return{
         restrict: 'E',
         templateUrl: 'angular-app/game-rating-directive/game-rating-temp.html',
-        bindToController:true,
-        controller:"GameController",
-        controllerAs:'vm',
-        scrope:{
-            starts:'@'
+        // bindToController:true,
+        // controller:"GameController",
+        // controllerAs:'vm',
+        trensclide:true,
+        scope:{
+            stars:'=rating'
             // '@' expext Object Added
             // '&' expect array Added
         }

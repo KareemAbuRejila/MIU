@@ -1,7 +1,9 @@
 const mongoose=require('mongoose');
 const dbName='meanGames';
 const dbUrl="mongodb://localhost:27017/"+dbName;
-require("./games-model.js")
+//Require all models
+require("./games-model.js");
+require('./users-model');
 //for Connection
 mongoose.connect(dbUrl,{useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.connection.on("connected",()=>{console.log("Mongoose connected to "+dbUrl)});

@@ -7,11 +7,12 @@ function Rating(){
     return{
         restrict: 'E',
         templateUrl: 'angular-app/rating-directive/rating-temp.html',
-        bindToController:true,
-        controller:"ServiceController",
-        controllerAs:'vm',
-        scrope:{
-            stars:'@'
+        // bindToController:true,
+        // controller:"ServiceController",
+        // controllerAs:'vm',
+        transclude:true,
+        scope:{
+            stars:'=rating'
             // '@' expext Object Added
             // '&' expect array Added
         }

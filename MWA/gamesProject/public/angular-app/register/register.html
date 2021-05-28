@@ -1,0 +1,40 @@
+<h1>Register:</h1>
+
+<div ng-if="vm.message" class="alert alert-success" role="alert">
+    <p>{{vm.message}}</p>
+</div>
+<div ng-if="vm.err" class="alert alert-danger" role="alert">
+    <p>{{vm.err}}</p>
+</div>
+
+<form name="vm.rsgister" ng-submit="vm.register()">
+    <div class="form-group">
+        <label for="edt-name">Name:
+            <input type="text" name="name" id="edt-name" 
+            placeholder="Name" ng-model="vm.name" 
+            autocapitalize="on" style="color: black;"/>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="edt-username">UserName:
+            <input type="text" name="username" id="edt-username" 
+            placeholder="UserName" ng-model="vm.username" 
+            autocapitalize="off"style="color: black;"/>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="edt-password">Password:
+            <input type="text" name="password" id="edt-password" 
+            placeholder="Password" ng-model="vm.password" 
+            autocapitalize="off"style="color: black;"/>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="edt-rpassword">Re-Password
+            <input type="text" name="rpassword" id="edt-rpassword" 
+            placeholder="Re-Password" ng-model="vm.rpassword" 
+            autocapitalize="off"style="color: black;"/>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-success">Register</button>
+</form>

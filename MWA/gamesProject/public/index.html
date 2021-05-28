@@ -14,8 +14,11 @@
 </head>
 
 <body>
-    <h1>Welcome to Mean Games Project</h1><br>
-    <div ng-view></div><br>
+    <!-- <h1>Welcome to Mean Games Project</h1><br> -->
+    <games-navigation></games-navigation>
+    <div class="container">
+        <div ng-view></div><br>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -39,6 +42,11 @@
     <script src="./angular-app/game/game-controller.js"></script>
     <script src="./angular-app/games-list/games-list-controller.js"></script>
     <script src="./angular-app/game-rating-directive/game-rating-directive.js"></script>
+    <script src="./angular-app/login/login.controller.js"></script>
+    <script src="./angular-app/register/register.contoller.js"></script>
+    <script src="./angular-app/navigation-directive/register-dircetive.js"></script>
+
+
 
 
 

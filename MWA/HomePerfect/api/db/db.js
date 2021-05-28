@@ -4,6 +4,7 @@ const dbUrl = 'mongodb://127.0.0.1:27017/'+dbName
 require('./models/website_details');
 require('./models/service_model');
 require('./models/provider-model');
+require('./models/users-model')
 
 
 mongoose.connect(dbUrl,{useNewUrlParser:true,useUnifiedTopology:true,useFindAndModify: false}

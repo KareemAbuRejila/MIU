@@ -10,7 +10,7 @@ const serviceSchema=new mongoose.Schema({
         required:true
     },
     rate:Number,
-    providers:[String]
+    providers:[]
 })
 
 mongoose.model('Service',serviceSchema,"services");
