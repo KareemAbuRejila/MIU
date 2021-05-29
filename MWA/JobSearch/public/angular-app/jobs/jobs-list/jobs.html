@@ -1,0 +1,36 @@
+<div ng-if="vm.message" class="alert alert-success" role="alert">{{vm.message}}</div>
+<div ng-if="vm.err" class="alert alert-danger" role="alert">{{vm.err}}</div>
+
+
+<h2>{{vm.title}}:</h2>
+
+<ul>
+    <li ng-repeat="job in vm.jobs">
+        <a href="#/{{job._id}}">{{job.title}}</a>
+    </li>
+</ul>
+<br>
+<br>
+<br>
+<form name="vm.jobForm" ng-submit="vm.addJob()">
+    <label for="edt-title">Title: 
+        <input type="text" name="title" id="edt-title" required ng-model="vm.newJobTitle" placeholder="example....">
+    </label><br>
+    <label for="edt-des">Description: 
+        <input type="text" name="des" id="edt-des" required ng-model="vm.newJobDes" placeholder="deatils....">
+    </label><br>
+    <label for="edt-exp">Experience: 
+        <input type="number" name="exp" id="edt-exp" required ng-model="vm.newJobExperience" placeholder="3 years">
+    </label><br>
+    <label for="edt-salary">Salary: 
+        <input type="number" name="salary" id="edt-salary" required ng-model="vm.newJobSalary" placeholder="$ 320,000">
+    </label><br>
+    <label for="edt-lat">Location Lat: 
+        <input type="text" name="lat" id="edt-lat" required ng-model="vm.newJobLocationLat" placeholder="231,342341">
+    </label><br>
+    <label for="edt-lng">Location Lng: 
+        <input type="text" name="lng" id="edt-lng" required ng-model="vm.newJobLocationLng" placeholder="23341,342341">
+    </label><br>
+    <button type="submit" class="btn-success">Add new Job</button>
+</form>
+

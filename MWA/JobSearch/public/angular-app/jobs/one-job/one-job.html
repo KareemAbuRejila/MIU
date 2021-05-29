@@ -1,0 +1,29 @@
+<div ng-if="vm.message" class="alert alert-success" role="alert">{{vm.message}}</div>
+<div ng-if="vm.err" class="alert alert-danger" role="alert">{{vm.err}}</div>
+<h1>{{vm.job.title}}</h1>
+<p>Description: {{vm.job.description}}</p>
+<p>Experience: {{vm.job.experience}}</p>
+<p>Salary: {{vm.job.salary}}</p>
+<p>Location (lat,lng): ({{vm.job.location.lat}},{{vm.job.location.lng}})</p>
+
+<br>
+<br>
+
+<form name="vm.jobForm" ng-submit="vm.partialUpdateJob()">
+    <label for="edt-des">Description: 
+        <input type="text" name="des" id="edt-des" required ng-model="vm.ejobDescription" placeholder="deatils....">
+    </label><br>
+    <label for="edt-exp">Experience: 
+        <input type="number" name="exp" id="edt-exp" required ng-model="vm.ejobExperience" placeholder="3 years">
+    </label><br>
+    <label for="edt-salary">Salary: 
+        <input type="number" name="salary" id="edt-salary" required ng-model="vm.ejobSalary" placeholder="$ 320,000">
+    </label><br><br>
+    <button type="submit" class="btn-edit" style="color: cadetblue;">Update Job</button>
+    <button ng-click="vm.deleteJob()" class="btn-delete" style="color: brown; padding: 5px;">Delete Job</button>
+
+
+</form>
+
+<br><br>
+

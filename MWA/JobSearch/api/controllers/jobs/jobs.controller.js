@@ -19,7 +19,7 @@ module.exports.getAllJobs=(req,resp)=>{
     // resp.status(200).json({"message":"Welcome to Get All Jobs"})
 }
 module.exports.addJob=(req,resp)=>{
-    console.log("OnAddJob");
+    console.log("OneAddJob");
     const newJob={};
     if(req.body.title)
     newJob.title=req.body.title;

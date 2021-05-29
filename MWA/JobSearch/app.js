@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/api',router);
 
-
 const server=app.listen(app.get('port'),()=>{
     const port=server.address().port;
     console.log("Listening on http://localhost:"+port);

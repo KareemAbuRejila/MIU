@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: azure;
+    color: black;
+}
+.header{
+    width: 100%;
+    height: fit-content;
+    padding: 25px;
+    background-color: dodgerblue;
+    color: white;
+}
+.container{
+    padding: 25px 0px 0px 40px ;
+}
