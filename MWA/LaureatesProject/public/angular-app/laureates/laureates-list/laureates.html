@@ -1,0 +1,63 @@
+<div ng-if="vm.message" class="alert alert-success" role="alert">{{vm.message}}</div>
+<div ng-if="vm.err" class="alert alert-danger" role="alert">{{vm.err}}</div>
+
+
+
+<h1>{{vm.title}}</h1>
+<br><br>
+<label for="edt_searchDb">
+    <input type="text" name="edt_searchDb" id="edt_searchDb" ng-model="vm.searchTextDb" placeholder="find by Category... by Db" style="color: black; ">
+</label>
+<button ng-click=vm.searchDb()>Search from DB</button>
+<br><br>
+<br><br>
+<label for="edt_search">
+    <input type="text" name="search" id="edt_search" ng-model="searchText.category" placeholder="find by Category... by UI" style="color: black; ">
+</label>
+<br><br>
+<ul>
+    <li ng-repeat="per in vm.lars | orderBy:'firstname'|filter:searchText|limitTo:vm.count">
+        <a href="#/{{per._id}}">{{per.firstname}} {{per.surmname}} :<span style="color: darkblue;">{{per.year}}</span></a>
+    </li>
+</ul>
+<br>
+<p>pagging by UI</p>
+<button ng-click='vm.nextUi()'>More</button>
+<button ng-click='vm.prevUi()'>Pref</button>
+<p>pagging by DB</p>
+<button ng-click='vm.nextDb()'>More</button>
+<button ng-click='vm.prevDb()'>Pref</button>
+
+<br>
+<br>
+<form name="vm.perForm" ng-submit="vm.addOne()">
+    <label for="edt-firstname">First Name: 
+        <input type="text" name="firstname" id="edt-firstname" required ng-model="vm.newPerFirstname" placeholder="FirstName">
+    </label><br>
+    <label for="edt-surmname">SurmName Name: 
+        <input type="text" name="surmname" id="edt-surmname" required ng-model="vm.newPerSurmname" placeholder="SurmName">
+    </label><br>
+    <label for="edt-born">BirthDay: 
+        <input type="datetime-local" name="born" id="edt-born" required ng-model="vm.newPerBorn" placeholder="mm/dd/yyyy">
+    </label><br>
+    <label for="edt-gender">Gendar: 
+        <input type="text" name="gender" id="edt-gender" required ng-model="vm.newPerGender" placeholder="Male">
+    </label><br>
+    <label for="edt-affiliation">Affiliation: 
+        <input type="text" name="affiliation" id="edt-affiliation" required ng-model="vm.newPerAffiliation" placeholder="Affiliation...">
+    </label><br>
+    <label for="edt-bornCountry">Born Country: 
+        <input type="text" name="bornCountry" id="edt-bornCountry" required ng-model="vm.newPerBornCountry" placeholder="SurmName">
+    </label><br>
+    <label for="edt-bornCity">Born City: 
+        <input type="text" name="bornCity" id="edt-bornCity" required ng-model="vm.newPerBornCity" placeholder="SurmName">
+    </label><br>
+    <label for="edt-year">Prize year: 
+        <input type="number" name="year" id="edt-year" required ng-model="vm.newPerYaer" placeholder="SurmName">
+    </label><br>
+    <label for="edt-category">Category: 
+        <input type="text" name="category" id="edt-category" required ng-model="vm.newPerCategory" placeholder="SurmName">
+    </label><br>
+
+    <button type="submit" class="btn-success">Add new Prize Winner</button>
+</form>

@@ -24,8 +24,9 @@ function JobsController(JobsFactory,$routeParams,){
         newJob.lng=vm.newJobLocationLng;
         console.log('New Job',newJob);
         JobsFactory.addOneJob(newJob).then((created)=>{
-            if(created)vm.message="Success"
-            _getJobs(JobsFactory,vm)
+            if(created){
+                vm.message="Success"
+            _getJobs(JobsFactory,vm)};
         }).catch((err)=>{
             vm.err="Faild ,Error:"+err;
 
