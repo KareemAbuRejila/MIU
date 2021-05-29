@@ -5,9 +5,37 @@
 <p>Experience: {{vm.job.experience}}</p>
 <p>Salary: {{vm.job.salary}}</p>
 <p>Location (lat,lng): ({{vm.job.location.lat}},{{vm.job.location.lng}})</p>
+<br><br>
+<h3>Reviews:</h3>
+<ul>
+    <li ng-repeat="rating in vm.job.ratings" style="background-color: lightgrey; border-radius: 5px; margin: 10px; padding: 10px;">
+        <h4>{{rating.owner}}:{{rating.stars}}</h4><br>
+        <p>{{rating.review}}</p>
+        <p>{{rating.date}}</p>
+    </li>
+</ul>
 
 <br>
 <br>
+
+<form name="vm.rateForm" ng-submit="vm.uploadRating()">
+    <h4>Write your review:</h4>
+    <label for="edt-owner">Owner: 
+        <input type="text" name="owner" id="edt-owner" required ng-model="vm.rateOwner" placeholder="UserName....">
+    </label><br>
+    <label for="edt-stars">Stars: 
+        <input type="number" name="stars" id="edt-stars" required ng-model="vm.rateStars" placeholder="0....">
+    </label>
+
+    <br>
+    <label for="edt-data">Review: 
+        <input type="text" name="data" id="edt-data" required ng-model="vm.rateData" placeholder="like....">
+    </label><br><br>
+    <button type="submit" class="btn-submit" style="color: darkgreen;">Update Rate</button>
+</form>
+
+
+<br><br><br>
 
 <form name="vm.jobForm" ng-submit="vm.partialUpdateJob()">
     <label for="edt-des">Description: 
@@ -21,8 +49,6 @@
     </label><br><br>
     <button type="submit" class="btn-edit" style="color: cadetblue;">Update Job</button>
     <button ng-click="vm.deleteJob()" class="btn-delete" style="color: brown; padding: 5px;">Delete Job</button>
-
-
 </form>
 
 <br><br>

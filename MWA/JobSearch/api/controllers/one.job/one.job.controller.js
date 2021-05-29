@@ -99,3 +99,55 @@ module.exports.partialUpdateJob=(req,resp)=>{
         resp.status(response.status).json(response.message);
     })
 }
+
+module.exports.getJobRating=(req,resp)=>{
+    console.log('OnGetRating');
+    const jobId=req.params.jobId;
+    Job.findById(jobId).exec((err,job)=>{
+        const response={
+            status:201,
+            message:''
+        };
+        if(err){
+            response.status=404;
+            response.message=err
+        }else{
+            response.message=job.ratings;
+        }
+        resp.status(response.status).json(response.message);
+    })
+}
+module.exports.uploadRating=(req,resp)=>{
+    console.log('OnUploadRaing');
+    const newrate={};
+    if(req.body.owner)
+    newrate.owner=req.body.owner
+    if(req.body.stars)
+    newrate.stars=parseFloat(req.body.stars);
+    if(req.body.review)
+    newrate.review=req.body.review
+
+    if(newrate){
+        const jobId=req.params.jobId;
+        Job.findById(jobId).exec((err,job)=>{
+    
+        if(!err){
+            job.ratings.push(newrate);
+            job.save((err,job)=>{
+                const response={
+                    status:201,
+                    message:''
+                };
+                if(err){
+                    response.status=404;
+                    response.message=err
+                }else{
+                    response.message=job;
+                }
+                resp.status(response.status).json(response.message);
+            })
+        }
+    
+        })
+    }
+}

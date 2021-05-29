@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ratingSchema=require('./rating-model');
 
 const jobSchema = new mongoose.Schema({
     title: {
@@ -19,7 +20,8 @@ const jobSchema = new mongoose.Schema({
     postData: {
         type: Date,
         default: Date.now
-    }
+    },
+    ratings:[ratingSchema]
 });
 
 

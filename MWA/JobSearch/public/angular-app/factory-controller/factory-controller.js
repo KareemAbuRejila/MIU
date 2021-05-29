@@ -7,7 +7,9 @@ function JobsFactory($http){
         addOneJob:addOneJob,
         deleteOneJob:deleteOneJob,
         replaceOneJob:replaceOneJob,
-        partialUpadateOneJob:partialUpadateOneJob
+        partialUpadateOneJob:partialUpadateOneJob,
+        getJobRating:getJobRating,
+        uploadJobRating:uploadJobRating
     }
 
 
@@ -29,6 +31,14 @@ function replaceOneJob(id,job){
 function partialUpadateOneJob(id,job){
     return $http.patch('/api/jobs/'+id,job).then(complete).catch(failed);
 }
+
+function getJobRating(id){
+    return $http.get('api/jobs/'+id+'ratings').then(complete).catch(failed);
+}
+function uploadJobRating(id,rating){
+    return $http.post('api/jobs/'+id+'/ratings',rating).then(complete).catch(failed);
+}
+
 
 function complete(respons){
     return respons.data;

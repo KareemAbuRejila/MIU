@@ -3,11 +3,11 @@ angular.module('jobSearch').controller('OneJobController',OneJobController);
 const _getOneGame=(JobsFactory,vm,jobId)=>{
     JobsFactory.getOneJob(jobId).then((job)=>{
         vm.job=job;
+        vm.ratings=job.ratings;
 
         vm.ejobDescription=job.description;
         vm.ejobExperience=job.experience;
         vm.ejobSalary=job.salary;
-
 
 
 
@@ -20,6 +20,13 @@ function OneJobController(JobsFactory,$routeParams){
     const vm=this;
     const jobId=$routeParams.jobId;
     _getOneGame(JobsFactory,vm,jobId);
+
+
+    JobsFactory.getJobRating(jobId).then((ratings)=>{
+        vm.ratings=ratings;
+    }).catch((err)=>{
+        vm.err="GetRating Error: "+err;
+    });
 
     vm.deleteJob=()=>{
         JobsFactory.deleteOneJob(jobId).then((deleted)=>{
@@ -50,5 +57,24 @@ function OneJobController(JobsFactory,$routeParams){
         })
         
     }
+
+    vm.uploadRating=()=>{
+        console.log('upload Rating');
+        const rating={
+            owner:vm.rateOwner,
+            stars:vm.rateStars,
+            review:vm.rateData 
+        }
+        JobsFactory.uploadJobRating(jobId,rating).then((updated)=>{
+            if(updated){
+                vm.message="Rating Updated"
+                // _getRating(JobsFactory,vm,jobId);
+            }
+        }).catch((err)=>{
+            vm.err="Failed Update, Error: "+err;
+        })
+    }
+
+    // const _getRating()
 
 }

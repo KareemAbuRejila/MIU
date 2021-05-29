@@ -1,14 +1,14 @@
-const express=require('express');
-const router=express.Router();
-const jobsController=require('../controllers/jobs/jobs.controller');
-const oneJobController=require('../controllers/one.job/one.job.controller');
+const express = require('express');
+const router = express.Router();
+const jobsController = require('../controllers/jobs/jobs.controller');
+const oneJobController = require('../controllers/one.job/one.job.controller');
 
 
 
 router.route('/jobs')
     .get(jobsController.getAllJobs)
     .post(jobsController.addJob);
-    
+
 
 router.route('/jobs/:jobId')
     .get(oneJobController.getOneJobs)
@@ -16,4 +16,9 @@ router.route('/jobs/:jobId')
     .put(oneJobController.replaceJob)
     .patch(oneJobController.partialUpdateJob);
 
-module.exports=router;
+router.route('/jobs/:jobId/ratings')
+    .get(oneJobController.getJobRating)
+    .post(oneJobController.uploadRating);
+
+
+    module.exports = router;
