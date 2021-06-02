@@ -1,0 +1,26 @@
+<h5>Your Services</h5>
+<input type="text" name="search" id="edt_search" ng-model="searchText">
+
+<ul>
+    <li  ng-repeat="service in vm.services | orderBy:['name'] |filter:searchText">
+        <a href="#/{{service._id}}">{{service.name}}</a>
+    </li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<form name="vm.serviceForm" ng-submit="vm.addService()">
+    <h2>Fill all to Add new Service:</h2><br>
+    <label for="edt-serviceName"> Service Name:
+        <input type="text" name="serviceName" id="edt-serviceName" ng-model="vm.newServiceUserName" required>
+    </label><br><br>
+    <label for="edt-serviceName"> Service Rating:
+        <input type="text" name="serviceRating" id="edt-serviceRating" ng-model="vm.newServiceRating" required>
+    </label><br><br>
+    <label for="edt-serviceImageUrl"> Service ImageUrl:
+        <input type="text" name="serviceImageUrl" id="edt-serviceImageUrl" ng-model="vm.newServiceUserImageUrl" required>
+    </label><br><br>
+
+    <button type="submit" class="btn-submit">Add Service</button>
+</form>
