@@ -1,7 +1,7 @@
 angular.module('homePerfect').controller("LoginController",LoginController);
 
             
-function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper){
+function LoginController($location,AuthFactory,UserDataFactory,$window){
     const vm=this;
 
     vm.isActiveTab=(url)=>{
@@ -30,9 +30,9 @@ function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper
                     vm.password="";
                     $location.path('/');
 
-                    const token=$window.sessionStorage.token;
-                    const decodedToken=jwtHelper.decodeToken(token);
-                    vm.loggedinUser=decodedToken.username;
+                    // const token=$window.sessionStorage.token;
+                    // const decodedToken=jwtHelper.decodeToken(token);
+                    // vm.loggedinUser=decodedToken.username;
 
                 }
             }).catch((err)=>{
