@@ -57,11 +57,14 @@ function JobsController(LaureatesFactory, $routeParams,) {
             vm.count = vm.count - 5
     }
 
-    vm.search=()=>{
+    vm.searchDb=()=>{
         
         if(vm.searchTextDb){
             LaureatesFactory.search(vm.searchTextDb).then((resalt)=>{
-                vm.message=resalt;
+                if(resalt&&resalt[0])
+                vm.message=resalt[0].firstname;
+            }).catch((err)=>{
+                vm.err=err
             })
         }
     }

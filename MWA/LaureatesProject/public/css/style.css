@@ -16,3 +16,6 @@ body{
 .container{
     padding: 25px 0px 0px 40px ;
 }
+button{
+    padding: 10px;
+}

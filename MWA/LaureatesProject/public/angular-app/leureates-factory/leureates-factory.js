@@ -23,7 +23,7 @@ function LaureatesFactory($http){
         return $http.delete('/api/laureates/'+id).then(complete).catch(failed);
     }
     function search(cat){
-        return $http.delete('/api/laureates/?cat='+cat).then(complete).catch(failed);
+        return $http.get('/api/laureates/search/?cat='+cat).then(complete).catch(failed);
     }
 
 
