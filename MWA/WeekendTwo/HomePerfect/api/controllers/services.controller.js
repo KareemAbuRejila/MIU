@@ -31,14 +31,17 @@ module.exports.getOneService = (req, resp) => {
     console.log('onGetOnceService');
     const serviceId = req.params.serviceId;
     Service.findById(serviceId).exec((err, service) => {
-        const providers = [];
+        if(err){
+            _out(resp, err, null)
+        }else{
+            const providers = [];
         if (service.providers.length === 0){
             _out(resp, err, service);
             return;
         } 
         service.providers.forEach((providerId, index, arr) => {
             Provider.findById(providerId).exec((err, provider) => {
-                if (!err) providers.push(provider)
+                if (!err) providers.push(provider);
                 if (index + 1 === arr.length) {
                     service.providers = providers;
                     _out(resp, err, service);
@@ -46,6 +49,7 @@ module.exports.getOneService = (req, resp) => {
             })
 
         });
+        }
     })
 
 }

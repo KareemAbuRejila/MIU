@@ -1,7 +1,7 @@
 angular.module('homePerfect').controller('ServicesController',ServicesController);
 
 
-function ServicesController(ServicesFactory){
+function ServicesController(ServicesFactory,AuthFactory){
     const vm=this;
     vm.title="homePerfect App";
     vm.isSubmitted=false;
@@ -26,4 +26,6 @@ function ServicesController(ServicesFactory){
         else vm.isSubmitted=true;
 
         }
+        vm.isLoggedIn=()=>AuthFactory.auth.isLoggedIn;
+
 }

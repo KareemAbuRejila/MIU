@@ -5,27 +5,29 @@
 <h4>Rating: <rating rating=vm.rating style="color: coral;"></rating>
 </h4>
 
-
 <h4>Providers:</h4>
-<ul>
-    <li ng-repeat="provider in vm.service.providers">
+<ul style="margin: 10px;">
+    <li ng-repeat="provider in vm.service.providers" style="font-size: xx-large;">
         {{provider}}
     </li>
-</ul>
+</ul> 
 
-<br>
-<br>
-<button ng-click="vm.deleteService()" style="color: brown;">Delete Service</button>
-<br>
-<br>
-<form name="vm.replaceServiceForm" ng-submit="vm.replaceService()">
-    <h2>Update Service: </h2><br>
-    <label for="edt-serviceName"> Service Rating:
-        <input type="text" name="serviceRating" id="edt-serviceRating" ng-model="vm.replaceServiceRating" required>
-    </label><br><br>
-    <label for="edt-serviceImageUrl"> Service ImageUrl:
-        <input type="text" name="serviceImageUrl" id="edt-serviceImageUrl" ng-model="vm.replaceServiceUserImageUrl" required>
-    </label><br><br>
+<div ng-if="vm.isLoggedIn()">
+    <br>
+    <br>
+    <button ng-click="vm.deleteService()" style="color: brown;">Delete Service</button>
+    <br>
+    <br>
+    <form name="vm.replaceServiceForm" ng-submit="vm.replaceService()">
+        <h2>Update Service: </h2><br>
+        <label for="edt-serviceName"> Service Rating:
+            <input type="text" name="serviceRating" id="edt-serviceRating" ng-model="vm.replaceServiceRating" required>
+        </label><br><br>
+        <label for="edt-serviceImageUrl"> Service ImageUrl:
+            <input type="text" name="serviceImageUrl" id="edt-serviceImageUrl" ng-model="vm.replaceServiceUserImageUrl"
+                required>
+        </label><br><br>
 
-    <button type="submit" class="btn-submit" style="color: green;">Update Service</button>
-</form>
+        <button type="submit" class="btn-submit" style="color: green;">Update Service</button>
+    </form>
+</div>

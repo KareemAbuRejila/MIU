@@ -40,3 +40,9 @@ a{
 .list_allGame{
     font-size: large;
 }
+.navbar-header a{
+    color: white;
+    font-weight: normal;
+    font-size: xx-large;
+
+}

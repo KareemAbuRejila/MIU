@@ -2,7 +2,7 @@
 angular.module('homePerfect').controller('ServiceController',ServiceController);
 
 
-function ServiceController(ServicesFactory,$routeParams){
+function ServiceController(ServicesFactory,$routeParams,AuthFactory){
     const vm=this;
     const serviceId=$routeParams.id;
     ServicesFactory.getOneService(serviceId).then((service)=>{
@@ -12,6 +12,8 @@ function ServiceController(ServicesFactory,$routeParams){
         vm.rating=_starsRating(vm.service.rate);
         vm.replaceServiceRating=service.rate;
         vm.replaceServiceUserImageUrl=service.imageUrl;
+    }).catch((err)=>{
+        vm.err="Not Founded: Error: "+err
     })
 
     vm.replaceService=()=>{
@@ -36,6 +38,8 @@ function ServiceController(ServicesFactory,$routeParams){
             console.log(err);
         })
     }
+    vm.isLoggedIn=()=>AuthFactory.auth.isLoggedIn;
+
 
 }
 
