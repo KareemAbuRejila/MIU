@@ -30,28 +30,30 @@ module.exports.getServices = (req, resp) => {
 module.exports.getOneService = (req, resp) => {
     console.log('onGetOnceService');
     const serviceId = req.params.serviceId;
-    Service.findById(serviceId).exec((err, service) => {
-        if(err){
-            _out(resp, err, null)
-        }else{
-            const providers = [];
-        if (service.providers.length === 0){
-            _out(resp, err, service);
-            return;
-        } 
-        service.providers.forEach((providerId, index, arr) => {
-            Provider.findById(providerId).exec((err, provider) => {
-                if (!err) providers.push(provider);
-                if (index + 1 === arr.length) {
-                    service.providers = providers;
-                    _out(resp, err, service);
-                }
-            })
+    const find=Service.findById(serviceId);
+    find.then((service)=>_OnFindByIdFucation(service,resp)).catch((err)=>{_out(resp, err, null)})
 
-        });
-        }
-    })
+}
+const _OnFindByIdFucation=(service,resp) => {
+        const providers = [];
+    if (service.providers.length === 0){
+        _out(resp, null, service);
+        return;
+    } 
+    service.providers.forEach((providerId, index, arr) => {
+        Provider.findById(providerId).then((provider)=>{
+            providers.push(provider);
+            if (index + 1 === arr.length) {
+                service.providers = providers;
+                _out(resp, null, service);
+            }
+        }).catch((err)=>{
+            _out(resp,err,null)
+        })
 
+
+    });
+    
 }
 
 module.exports.editService = (req, resp) => {
@@ -73,17 +75,15 @@ module.exports.editService = (req, resp) => {
 module.exports.deleteService = (req, resp) => {
     console.log('OnDeleteEditService');
     const serviceId = req.params.serviceId;
-    Service.findByIdAndDelete(serviceId, (err, deletedService) => {
-        _out(resp, err, deletedService);
-    })
+    Service.findByIdAndDelete(serviceId).then((deletedService)=>{
+        _out(resp, null, deletedService)
+    }).catch((err)=>_out(resp, err, null));
 
 }
 
 const _getProvider = (id) => {
     console.log("OnGetProvider");
-    Provider.findById(id).exec((err, provider) => {
-        if (!err) return provider
-    })
+    Provider.findById(id).then((provider)=>provider).catch((err)=>_out(resp,err,null));
 }
 
 const _out = (resp, err, out) => {

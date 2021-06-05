@@ -14,21 +14,22 @@ module.exports.registerUser = (req, resp) => {
     if (req.body.password)
         newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
 
-    User.create(newUser, (err, createdUser) => {
-        const response = {
-            status: 201,
-            message: ''
-        }
-        if (err) {
-            console.log(err);
-            response.status = 400;
-            response.message = err
-        } else {
-            response.message = createdUser
-            console.log('Created');
-        }
-        resp.status(response.status).json(response.message);
-    })
+    User.create(newUser, _OnCreateFuncation)
+}
+const _OnCreateFuncation=(err, createdUser) => {
+    const response = {
+        status: 201,
+        message: ''
+    }
+    if (err) {
+        console.log(err);
+        response.status = 400;
+        response.message = err
+    } else {
+        response.message = createdUser
+        console.log('Created');
+    }
+    resp.status(response.status).json(response.message);
 }
 
 module.exports.autheticateUser = (req, resp) => {
@@ -37,45 +38,42 @@ module.exports.autheticateUser = (req, resp) => {
     const authUser = {};
     if (req.body.username)
         authUser.username = req.body.username
-    // if(req.body.password)
-    // authUser.password=bcrypt.hashSync(req.body.password,bcrypt.genSaltSync(10))
+    User.findOne(authUser).exec(_OnFindOneFuncation)
+}
+const _OnFindOneFuncation=(err, authedUser) => {
+    const response = {
+        status: 200,
+        message: ''
+    }
+    if (err) {
+        console.log(err);
+        response.status = 400;
+        response.message = err
+    } else {
+        if (!authedUser) {
+            response.message = { "message": "We don't have this User" };
+            console.log('Authenticated');
+            response.status = 404;
 
-    User.findOne(authUser).exec((err, authedUser) => {
-        const response = {
-            status: 200,
-            message: ''
-        }
-        if (err) {
-            console.log(err);
-            response.status = 400;
-            response.message = err
         } else {
-            if (!authedUser) {
-                response.message = { "message": "We don't have this User" };
+            if (bcrypt.compareSync(req.body.password, authedUser.password)) {
                 console.log('Authenticated');
-                response.status = 404;
-
-            } else {
-                if (bcrypt.compareSync(req.body.password, authedUser.password)) {
-                    console.log('Authenticated');
-                    const token = jwt.sign({ username: authedUser.username, userId: authedUser._id }, "cs572", { expiresIn: 3600 });//token axpires after an hour
-                    response.message = {
-                        success: true,
-                        token: token
-                    }
-
-                } else {
-                    console.log("UnAuthorized");
-                    response.status = 401;
-                    response.message = { "message": "Faild Password" };
+                const token = jwt.sign({ username: authedUser.username, userId: authedUser._id }, "cs572", { expiresIn: 3600 });//token axpires after an hour
+                response.message = {
+                    success: true,
+                    token: token
                 }
 
+            } else {
+                console.log("UnAuthorized");
+                response.status = 401;
+                response.message = { "message": "Faild Password" };
             }
 
         }
-        resp.status(response.status).json(response.message);
-    })
 
+    }
+    resp.status(response.status).json(response.message);
 }
 
 //Not usese

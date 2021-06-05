@@ -1,0 +1,12 @@
+- nodejs: it's a way to start js outside browser (server side), (it's platform enables to run js on serverside)
+		* written by cc
+		* build in v8(run by chrome run js)
+		* event driven programing: programing style based on responding events, expected to know by callbacks, after do this then do this, it's callbacks, registe these callbacks 
+		* registering event: linking callback with accalty event (then and catch) // registration operantion
+		* non-blocking 
+		* single thread
+		* lite: 
+		* uses nmp to get packages
+		* 
+v8: google open source, written c++, used on chrome, run js on mashine, 
+- jvm: provide java platform.

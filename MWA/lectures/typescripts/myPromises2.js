@@ -1,9 +1,9 @@
 const mySecondPomiseFactory=()=>{
-    return new Promise(resolve=> setTimeout(()=>resolve("Done"),3000));
+    return new Promise(resolve=> setTimeout(()=>resolve("Done 3"),3000));
 }
 const mySecondPomiseFactory2=()=>{
 
-    return new Promise(resolve=> setTimeout(()=>resolve("Done"),1000));
+    return new Promise(resolve=> setTimeout(()=>resolve("Done 1"),1000));
 }
 
 // const result1=mySecondPomiseFactory();
