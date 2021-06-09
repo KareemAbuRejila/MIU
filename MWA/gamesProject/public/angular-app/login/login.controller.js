@@ -1,7 +1,7 @@
 angular.module('meanGames').controller("LoginController",LoginController);
 
             
-function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper){
+function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper,$scope){
     const vm=this;
 
     vm.isActiveTab=(url)=>{
@@ -29,7 +29,6 @@ function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper
                     vm.username="";
                     vm.password="";
                     $location.path('/');
-
                     const token=$window.sessionStorage.token;
                     const decodedToken=jwtHelper.decodeToken(token);
                     vm.loggedinUser=decodedToken.username;
@@ -46,5 +45,13 @@ function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper
         AuthFactory.auth.isLoggedIn=false;
         delete $window.sessionStorage.token;
         $location.path('/');
+    }
+
+    $scope.checkUserValidationFromSession=()=>{
+        console.log("OnCheck");
+        if($window.sessionStorage.token){
+            const token=$window.sessionStorage.token;
+            AuthFactory.auth.isLoggedIn=true;
+        }
     }
 }

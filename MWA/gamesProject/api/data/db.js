@@ -5,6 +5,9 @@ const dbUrl="mongodb://localhost:27017/"+dbName;
 require("./games-model.js");
 require('./users-model');
 //for Connection
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 mongoose.connect(dbUrl,{useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.connection.on("connected",()=>{console.log("Mongoose connected to "+dbUrl)});
 mongoose.connection.on("disconnected",()=>{console.log("Mongoose disconnected");});

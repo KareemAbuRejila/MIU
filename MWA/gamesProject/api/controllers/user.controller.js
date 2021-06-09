@@ -38,9 +38,9 @@ module.exports.autheticateUser = (req, resp) => {
     const authUser = {};
     if (req.body.username)
         authUser.username = req.body.username
-    User.findOne(authUser).exec(_OnFindOneFuncation)
+    User.findOne(authUser).exec((err,authedUser)=>_OnFindOneFuncation(err,authedUser,req,resp))
 }
-const _OnFindOneFuncation=(err, authedUser) => {
+const _OnFindOneFuncation=(err, authedUser,req,resp) => {
     const response = {
         status: 200,
         message: ''
@@ -52,7 +52,7 @@ const _OnFindOneFuncation=(err, authedUser) => {
     } else {
         if (!authedUser) {
             response.message = { "message": "We don't have this User" };
-            console.log('Authenticated');
+            console.log("We don't have this User");
             response.status = 404;
 
         } else {

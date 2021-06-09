@@ -17,6 +17,13 @@ app.use(express.json({extened:false}));
 app.use("/node_modules",express.static(path.join(__dirname,"node_modules")));
 app.use(express.static(path.join(__dirname,'public')));
 
+
+app.use("/api",(req,resp,next)=>{
+    resp.header("Access-Control-Allow-Origin","http://127.0.0.1:4200");
+    resp.header("Access-Control-Allow-Header","Orgin,X-Requested-With, Content-Type, Accept");
+    next()
+})
+
 app.use('/api',routes);
 
 const server=app.listen(app.get('port'),()=>{

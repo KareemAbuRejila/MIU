@@ -1,4 +1,5 @@
-<nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-fixed-top bg-dark " style="background-color: black;" ng-init="vm.init()">
+<nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-fixed-top bg-dark " style="background-color: black;" ng-init="vm.init()"
+ng-init="checkUserValidationFromSession()">
     
     <div class="container-fluid">
         <div class="navbar-header">
