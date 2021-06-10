@@ -1,6 +1,76 @@
-<h1>{{game.title}}</h1>
+<h1>{{ game.title }}</h1>
 
-<h4>Game Price: {{game.price}}</h4>
-<h4>Game minPlayers: {{game.minPlayers}}</h4>
-<h4>Game maxPlayer: {{game.maxPlayer}}</h4>
-<h4>Game minAge: {{game.minAge}}</h4>
+<h4>Game Price: {{ game.price }}</h4>
+<h4>Game minPlayers: {{ game.minPlayers }}</h4>
+<h4>Game maxPlayer: {{ game.maxPlayer }}</h4>
+<h4>Game minAge: {{ game.minAge }}</h4>
+
+<br />
+<br />
+<br />
+<button ng-click="deleteGame()" style="color: brown" ng-if="isLoggedIn()">
+  Delte Game
+</button>
+<br />
+<br /><br />
+<form name="replaceGameForm" ng-submit="replaceGame()" ng-if="isLoggedIn()">
+  <label for="edt-price"
+    >Price:
+    <input
+      type="text"
+      id="edt-price"
+      name="price"
+      required
+      ng-model="replaceGamePrice"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-minPlayer"
+    >Minmum Number of Players:
+    <input
+      type="text"
+      id="edt-minPlayer"
+      name="minPlayers"
+      ng-min="1"
+      ng-max="10"
+      required
+      ng-model="replaceGameMinPlayers"
+      style="color: black"
+    /> </label
+  ><br />
+  <span
+    ng-show="
+      gameForm.minPlayers.$dirty &&
+      gameForm.minPlayers.invalid &&
+      gameForm.isSubmitted
+    "
+    style="color: black"
+  >
+    Invalid</span
+  >
+  <br />
+  <label for="edt-maxPlayer"
+    >Maxmum Number of Players:
+    <input
+      type="text"
+      id="edt-maxPlayer"
+      name="maxPlayers"
+      required
+      ng-model="replaceGameMaxPlayers"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-minAge"
+    >Minmum Recommanded Player Age:
+    <input
+      type="text"
+      id="edt-minAge"
+      name="minAge"
+      required
+      ng-model="replaceGameMinAge"
+      style="color: black"
+    /> </label
+  ><br />
+
+  <button type="submit" class="btn-success">Replace Game</button>
+</form>

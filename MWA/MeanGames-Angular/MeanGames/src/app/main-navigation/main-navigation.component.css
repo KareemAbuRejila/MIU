@@ -1,4 +1,5 @@
-body{
+:host{
     background-color: chocolate;
-    color: black;
+    margin-bottom: 20px;
+    color: coral;
 }

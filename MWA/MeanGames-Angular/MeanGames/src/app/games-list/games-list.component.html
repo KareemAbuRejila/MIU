@@ -1,7 +1,117 @@
-<p>{{titleTest}}</p>
-
+<h1>{{ titleTest }}</h1>
 <ul>
-    <li *ngFor="let game of games">
-        <a routerLink="/game/{{game._id}}">{{game.title}}</a>
-    </li>
+  <li *ngFor="let game of games">
+    <h3>
+      <a routerLink="/game/{{ game._id }}" style="color: gold">{{
+        game.title
+      }}</a>
+    </h3>
+  </li>
 </ul>
+
+<form name="gameForm" ng-submit="addGame()" ng-if="vm.isLoggedIn()">
+  To add a new Game Please Fill in all <br /><br />
+  <label for="edt-title"
+    >Game Title:
+    <input
+      type="text"
+      id="edt-title"
+      name="title"
+      required
+      ng-model="newGameTitle"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-price"
+    >Price:
+    <input
+      type="text"
+      id="edt-price"
+      name="price"
+      required
+      ng-model="newGamePrice"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-year"
+    >Year of Publication:
+    <input
+      type="text"
+      id="edt-year"
+      name="year"
+      required
+      ng-model="newGameYear"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-rate"
+    >Rating:
+    <input
+      type="text"
+      id="edt-rate"
+      name="rate"
+      required
+      ng-model="newGameRating"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-minPlayer"
+    >Minmum Number of Players:
+    <input
+      type="text"
+      id="edt-minPlayer"
+      name="minPlayers"
+      ng-min="1"
+      ng-max="10"
+      required
+      ng-model="newGameMinPlayers"
+      style="color: black"
+    /> </label
+  ><br />
+  <span
+    ng-show="
+      gameForm.minPlayers.$dirty &&
+      gameForm.minPlayers.invalid &&
+      gameForm.isSubmitted
+    "
+    style="color: black"
+  >
+    Invalid</span
+  >
+  <br />
+  <label for="edt-maxPlayer"
+    >Maxmum Number of Players:
+    <input
+      type="text"
+      id="edt-maxPlayer"
+      name="maxPlayers"
+      required
+      ng-model="newGameMaxPlayers"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-minAge"
+    >Minmum Recommanded Player Age:
+    <input
+      type="text"
+      id="edt-minAge"
+      name="minAge"
+      required
+      ng-model="newGameMinAge"
+      style="color: black"
+    /> </label
+  ><br />
+  <label for="edt-designers"
+    >Designers name:
+    <input
+      type="text"
+      id="edt-designers"
+      name="designers"
+      required
+      ng-model="newGameDesigner"
+      style="color: black"
+    /> </label
+  ><br />
+
+  <button type="submit" class="btn-success">Add Game</button>
+</form>
