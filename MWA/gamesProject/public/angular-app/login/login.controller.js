@@ -11,7 +11,7 @@ function LoginController($location,AuthFactory,UserDataFactory,$window,jwtHelper
         }
     }
 
-    vm.isLoggedIn=()=>AuthFactory.auth.isLoggedIn;
+    vm.isLoggedIn=()=>AuthFactory.auth.isLoggedIn;  
 
 
     vm.login=()=>{

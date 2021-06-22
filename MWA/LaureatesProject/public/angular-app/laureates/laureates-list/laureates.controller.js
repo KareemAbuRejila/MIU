@@ -58,7 +58,6 @@ function JobsController(LaureatesFactory, $routeParams,) {
     }
 
     vm.searchDb=()=>{
-        
         if(vm.searchTextDb){
             LaureatesFactory.search(vm.searchTextDb).then((resalt)=>{
                 if(resalt&&resalt[0])

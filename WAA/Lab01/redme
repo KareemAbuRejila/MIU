@@ -1,0 +1,12 @@
+Part 1: 
+- Done:
+	* print the result
+	* save the results at List and save it to the session.
+	* draw the table with the saved operations.
+Part 2:
+- Done:
+	* create Calucator html file and controller
+	* get the numbers operation from paramerters the and the operation to the view (calculator.html).
+	* view the result as the lab 
+
+	KARIM ABURJILA

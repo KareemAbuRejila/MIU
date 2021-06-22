@@ -1,9 +1,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Calculator</title>
 </head>
 <body>
-<p th:text="'Hello ' + ${message} " />
+
+<h1 th:text="'Number 1: ' + ${num1} "></h1>
+<h1 th:text="'Operation: ' + ${op} "></h1>
+<h1 th:text="'Number 2: ' + ${num2} "></h1>
+<h1 th:text="'The Result= ' + ${result} "></h1>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
-package servlets.models;
+package mvc.models;
 
-public class Operation{
+public class Operation {
     double number1;
     double number2;
     String op;

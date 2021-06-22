@@ -34,14 +34,19 @@ public class Cal extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getParameter("fNumberP")!=null){
-            int fNumberp=Integer.parseInt(req.getParameter("fNumberP"));
-            int sNumberp=Integer.parseInt(req.getParameter("sNumberP"));
-            int sum=fNumberp+sNumberp;
-            System.out.println(sum);
-            int fNumberm=Integer.parseInt(req.getParameter("fNumberM"));
-            int sNumberm=Integer.parseInt(req.getParameter("sNumberM"));
-            double multi=fNumberm*sNumberm;
-            System.out.println(multi);
+            if (req.getParameter("fNumberP")!=null&&req.getParameter("sNumberP")!=null){
+                int fNumberp=Integer.parseInt(req.getParameter("fNumberP"));
+                int sNumberp=Integer.parseInt(req.getParameter("sNumberP"));
+                int sum=fNumberp+sNumberp;
+                System.out.println(sum);
+            }
+            if (req.getParameter("fNumberP")!=null&&req.getParameter("sNumberP")!=null) {
+                int fNumberm=Integer.parseInt(req.getParameter("fNumberM"));
+                int sNumberm=Integer.parseInt(req.getParameter("sNumberM"));
+                double multi=fNumberm*sNumberm;
+                System.out.println(multi);
+            }
+
 
             PrintWriter out=resp.getWriter();
             out.println("<html><body>");
