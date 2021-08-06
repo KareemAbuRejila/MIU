@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Blog from './continers/blog/Blog';
+import Blog from "./container/blog/Blog"
 
 function App() {
   return (
