@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a408f44-2896-4e59-8b13-f888dee29cd1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/java/com/students/domain/Gander.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/java/com/students/repository/genders/GenderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/java/com/students/repository/genders/GenderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/webapp/resources/images/Puppet404.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab02/Lab2_Valid/Lab2_Valid/src/main/webapp/resources/images/error_page.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/resources/templates/listServices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab01/Lab1/product_springmvc/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab01/Lab1/product_springmvc/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/domin/ServiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/domin/ServiceModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/repository/ServicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/repository/ServicesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/repository/ServicesRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/repository/ServicesRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/service/ServiceModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/service/ServiceModelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/service/ServiceModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/java/edu/miu/homeperfect/service/ServiceModelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/resources/templates/AddUserForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/resources/templates/AddServiceForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab03/HomePerfect/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1vsfKdFfEdwGzH2gb03coct89CD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringwithApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springwith" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.miu.springwithDB.SpringwithApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a408f44-2896-4e59-8b13-f888dee29cd1" name="Default Changelist" comment="" />
+      <created>1627355659135</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627355659135</updated>
+      <workItem from="1627355660649" duration="763000" />
+      <workItem from="1627356672200" duration="9412000" />
+      <workItem from="1627416507608" duration="14333000" />
+      <workItem from="1627566576736" duration="934000" />
+      <workItem from="1627768088728" duration="1369000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
